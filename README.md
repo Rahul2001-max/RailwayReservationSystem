@@ -37,7 +37,9 @@ Also functions as a Eureka Server for service registration.
 
 
 
-⚡ Features
+# Features
+
+
 ✅ User Authentication & Security (Spring Security + Encrypted Passwords)
 ✅ Microservices Architecture (Independent services for scalability)
 ✅ Service Discovery (Eureka Server + Eureka Clients)
