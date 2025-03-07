@@ -3,7 +3,8 @@ Advance Java Training Project
 This is a Spring Boot microservices-based Railway Reservation System that provides APIs for user management, train details, and ticket booking. It follows a microservices architecture and integrates Spring Cloud Eureka, API Gateway, and Spring Security to ensure scalability and security.
 
 
-# Tech Stack
+# Tech Stack:
+
 Java 17
 Spring Boot
 Spring Cloud Netflix Eureka (Service Discovery)
@@ -14,7 +15,8 @@ MySQL Database
 
 
 
-🛠️ Microservices Overview
+# Microservices Overview : 
+
 1️⃣ User Service (user-service)
 Manages user registration, authentication, and authorization.
 Stores user credentials in an encrypted format.
