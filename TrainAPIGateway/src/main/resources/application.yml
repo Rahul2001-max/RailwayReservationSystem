@@ -1,0 +1,36 @@
+server:
+  port: 8080  # API Gateway runs on port 8080
+
+spring:
+  application:
+    name: api-gateway  # Register as 'api-gateway' in Eureka
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true  # Enable Eureka service discovery
+          lower-case-service-id: true  # Convert service names to lowercase
+
+      routes:
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/users/**
+
+        - id: train-service
+          uri: lb://train-service
+          predicates:
+            - Path=/trains/**
+
+        - id: reservation-service
+          uri: lb://reservation-service
+          predicates:
+            - Path=/reservations/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/  # Register to Eureka Server
+  instance:
+    prefer-ip-address: true

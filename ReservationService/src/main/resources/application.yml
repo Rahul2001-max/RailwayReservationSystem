@@ -1,0 +1,27 @@
+server:
+  port: 8083  # User-service runs on port 8082
+
+spring:
+  application:
+    name: reservation-service  # Unique service name for Eureka registration
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/railway_db
+    username: rahul
+    password: Root12345
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/  # Connect to Eureka Server (API Gateway)
+    fetch-registry: true
+    register-with-eureka: true
+
+  instance:
+    prefer-ip-address: true  # Use IP address for service registration
+    hostname: localhost
